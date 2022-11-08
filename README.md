@@ -32,3 +32,21 @@ The system has the following states:
 <img src="https://user-images.githubusercontent.com/74547133/199234802-aa1ede86-6fc7-471f-af69-f7f68e91383f.jpeg" width="400" height="300">
 Demo: https://youtube.com/shorts/Z2RcCLbM2EU
 
+# Homework 3
+Use the joystick to control the position of the segment and ”draw” on the display. The movement between segments
+should be natural (meaning they should jump from the current position only to neighbors, but without passing through ”walls”).
+
+The system has the following states:
+
+    State 1 (default, but also initiated after a button press in State 2): Current position blinking. Can use the joystick
+    to move from one position to neighbors. Short pressing the button toggles state 2. Long pressing the button in state 1
+    resets the entire display by turning all the segments OFF and moving the current position to the decimal point.
+    
+    State 2 (initiated after a button press in State 1): The current segment stops blinking, adopting the state of the segment
+    before selection (ON or OFF). Toggling the X (or Y, you chose) axis should change the segment state from ON to OFF or from
+    OFF to ON. Clicking the joystick should save the segment state and exit back to state 1.
+
+<img src="https://user-images.githubusercontent.com/74547133/200623935-c3172aa8-6c11-4ee9-9c1e-598a3790348c.jpeg" width="400" height="300">
+Demo: https://www.youtube.com/watch?v=Px-4uAZYgc8
+
+
