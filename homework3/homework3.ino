@@ -3,7 +3,6 @@ const int baudRate = 9600;
 const long blinkInterval = 200;
 const int longPressThreshold = 2000;
 const int maxJoystickValue = 1023;
-const int averageDefaultJoystickPosition = 520;
 int state = 1;
 int currentPosition = 7;
 int debounceJoystick = 15;
@@ -17,14 +16,11 @@ const int pinF = 9;
 const int pinG = 10;
 const int pinDP = 11;
 const int segSize = 8;
-bool commonAnode = false;
-const int noOfDigits = 10;
 byte blinkingSegmentState = 0;
 int segments[segSize] = {
   pinA, pinB, pinC, pinD, pinE, pinF, pinG, pinDP
 };
 byte segmentsValues[segSize] = { 0, 0, 0, 0, 0, 0, 0, 0 };  // a  b  c  d  e  f  g dp
-const byte defaultSegmentsValues[segSize] = { 0, 0, 0, 0, 0, 0, 0, 0 };
 const int nextSegmentBasedOnCurrentPosition[segSize][possibleMovements] = {
   // LEFT  RIGHT  UP  DOWN
   { 5, 1, 0, 6 },  // a
@@ -107,7 +103,6 @@ void implementXMovement() {
   if (xValueJoystick > upperLimit) {
     if (lastXState != 1) {
       valueLeftDefaultRange(right, true);
-      Serial.println("X RIght");
     }
     lastXState = 1;
     return;
@@ -157,7 +152,6 @@ void implementButtonPress() {
     lastButtonInputChange = 0;
     reset();
   }
-
   previousSwReading = swState;
 }
 
@@ -178,7 +172,6 @@ void takeOnlyHigherJoystickInput() {
   } else {
     yDistanceToHitLimit = yValueJoystick;
   }
-
   if (xDistanceToHitLimit < yDistanceToHitLimit) {
     implementXMovement();
   } else {
