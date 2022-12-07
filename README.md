@@ -73,22 +73,24 @@ The system has the following states:
 Demo: https://youtu.be/Y2FF3KUiv8w
 
 # Homework 5
-Implement snake using 8x8 matrix, joystick and an LCD display. When program first starts a greeting message is displayed. After
-pressing on the joystick.
-You can cycle through the menu (UP/DOWN) or press on every item:
+Implement snake using 8x8 matrix, joystick and an LCD display. When program first starts a greeting message is displayed. 
+Pressing on the joystick opens the menu.
+
+You can cycle through the menu (UP/DOWN) and press on every item:
 
     Pressing on Start Game puts you in game mode. 
     
     Pressing on Highscore will show top 5 users. You can go back by pressing on joystick.
 
     Pressing on Settings opens a new menu where you can change preferences. You can edit a setting by clicking on it and moving
-    UP or DOWN and save it by clicking again.
+    UP or DOWN and save it by clicking again. You can go back to the menu by pressing on Back (7).
     
-    Pressing on About shows you info about the creator of the game and game name (you can see the whole text by moving LEFT/RIGHT)
+    Pressing on About shows you info about the creator of the game and game name (you can see the whole text by moving 
+    LEFT/RIGHT)
     
     Pressing on How to play gives you tips to be better at the game (you can see the whole text by moving LEFT/RIGHT)
     
     
 <img src="https://user-images.githubusercontent.com/74547133/206240347-7feea5ee-9d5f-4c8f-bd11-931815201b3a.jpeg" width="400" height="300">
-Demo: https://youtu.be/Y2FF3KUiv8w
+Demo: https://youtu.be/SuwnZih-VE0
     
